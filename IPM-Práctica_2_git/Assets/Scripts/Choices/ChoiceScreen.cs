@@ -105,7 +105,11 @@ public class ChoiceScreen : MonoBehaviour
         choice.index = button.choiceIndex;
         choice.title = button.text;
         root.SetActive(false);
-        
+
+        //Prueba
+        /////////////////////////////////////////////////////////AW>OODXAWO
+        LoadJobInfo.jobsInfo[0] = "owasowa";
+        HealthControl.value -= 5;
     }
     
 }

@@ -6,6 +6,7 @@ public class ChangeScene : MonoBehaviour
 {
     public bool nextScene;
     public int sceneIndex;
+    static public int lastScene;
     void Start()
     {
         
@@ -21,8 +22,8 @@ public class ChangeScene : MonoBehaviour
     }
    public void changeScene(int index)
     {
-       
-            SceneManager.LoadScene(index);
+        lastScene = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(index);
         
     }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using static Unity.VisualScripting.Member;
 
 public class AudioManager : MonoBehaviour
 {
@@ -36,27 +37,35 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySong(AudioClip song, bool playOnStart = true, bool loop = true)
     {
-        if(song != null)
+        if (song != null)
         {
-            for(int i = 0; i < songs.Count; i++)
+            for (int i = 0; i < songs.Count; i++)
             {
                 SONG s = songs[i];
-                if (s != null && s.isPlaying())
+                if (s.clip == song)
                 {
-                    s.Stop();
-                }
-                if(s.clip == song)
-                {
+                    if(s.source == null)
+                    {
+                        s.source = AudioManager.CreateNewSource(string.Format("SONG [{0}]", s.clip.name));
+                    }
                     activeSong = s;
                     s.Play();
                     break;
                 }
+                else if (s.isPlaying())
+                {
+                    songs.RemoveAt(i);
+                    s.DestroySong();
+                    activeSong = null;
+                    break;
+                }
+                
             }
             if (activeSong == null || activeSong.clip != song)
-                activeSong = new SONG(song, playOnStart, loop);
+            { activeSong = new SONG(song, playOnStart, loop); }
         }
         else
-            activeSong = null;
+        { activeSong = null; }
     }
 
     public static AudioSource CreateNewSource(string _name)
@@ -86,8 +95,6 @@ public class AudioManager : MonoBehaviour
             if(playOnStart)
                 source.Play();
         }
-
-        public float volume { get { return source.volume; } set { source.volume = value; } }
 
         public void Play() { source.Play(); }
 

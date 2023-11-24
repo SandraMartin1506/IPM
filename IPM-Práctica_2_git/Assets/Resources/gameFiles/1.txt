@@ -1,0 +1,1 @@
+{"chapterName":"","chapterProgress":0,"cachedLastSpeaker":"","currentTextSystemSpeakerNameText":"","currentTextSystemDisplayText":"","health":75.0,"charactersInScene":[],"jobsInfo":[{"job":"owasowa","result":""},{"job":"","result":""},{"job":"","result":""}],"background":{"instanceID":0},"music":{"instanceID":0}}

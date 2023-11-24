@@ -35,12 +35,12 @@ public class DialogueSystem : MonoBehaviour
         speechPanel.SetActive(true);
         speechText.text = "";
         speakerNameText.text = DetermineSpeaker(targetSpeaker);
-        if(TextOptions.Size != speechText.fontSize) { speechText.fontSize = TextOptions.Size; }
 
-        speechText.lineSpacing = TextOptions.Spacing;
-        speechText.wordSpacing = TextOptions.WordS;
-        speakerNameText.wordSpacing = TextOptions.WordS+3;
-        speakerNameText.fontSize = TextOptions.Size+5;
+        if(TextOptions.Size != speechText.fontSize) { speechText.fontSize = TextOptions.Size; }
+        if(TextOptions.Spacing != speechText.lineSpacing) { speechText.lineSpacing = TextOptions.Spacing; }
+        if(TextOptions.WordS != speechText.wordSpacing) { speechText.wordSpacing = TextOptions.WordS; }
+        if(TextOptions.WordS+3 != speakerNameText.wordSpacing) { speakerNameText.wordSpacing = TextOptions.WordS + 3; }
+        if(TextOptions.Size+5 != speakerNameText.fontSize) { speakerNameText.fontSize = TextOptions.Size + 5; }
 
         isWatingForUserInput = false;
         while(speechText.text != targetSpeech)
@@ -76,12 +76,6 @@ public class DialogueSystem : MonoBehaviour
         public GameObject speechPanel;
         public TMP_Text speakerNameText;
         public TMP_Text speechText;
-
-        //speechText.fontSize = TextOptions.Size;
-        //speechText.lineSpacing = TextOptions.Spacing;
-        //speechText.characterSpacing = TextOptions.Kerning;
-        //speakerNameText.characterSpacing = TextOptions.Kerning;
-        //speakerNameText.fontSize = TextOptions.Size+5ish;
     }
 
     public GameObject speechPanel { get { return elements.speechPanel;}}

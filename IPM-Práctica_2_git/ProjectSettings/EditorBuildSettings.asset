@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CharactersData/Character1.unity
     guid: 94aec2a026654754b964326f68e8106a
+  - enabled: 1
+    path: Assets/Scenes/Personal Stats.unity
+    guid: 39b721b4755f5c44bbeee92364676688
   m_configObjects: {}
