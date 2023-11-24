@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Drawing;
 using UnityEngine;
 using UnityEngine.UI;
-using static DialogueSystem;
 using UnityEngine.Audio;
+using UnityEngine.Rendering;
 
 public class Volume : MonoBehaviour
 {
     public AudioMixer sfx;
     public AudioMixer songs;
     public AudioMixer voices;
+    [SerializeField] private Slider All;
     [SerializeField] private Slider SFX;
     [SerializeField] private Slider Songs;
     [SerializeField] private Slider Voices;
@@ -33,19 +34,19 @@ public class Volume : MonoBehaviour
             SetVoicesV(Voices.value);
         }
     }
-    public void SetSFXV(float volumen)
+    public void SetSFXV(float volume)
     {
-        sfx.SetFloat("volumen", volumen);
-        PlayerPrefs.SetFloat("sfx", volumen);
+        sfx.SetFloat("volume", volume);
+        PlayerPrefs.SetFloat("sfx", volume);
     }
-    public void SetSongsV(float volumen)
+    public void SetSongsV(float volume)
     {
-        songs.SetFloat("volumen", volumen);
-        PlayerPrefs.SetFloat("songs", volumen);
+        songs.SetFloat("volume", volume);
+        PlayerPrefs.SetFloat("songs", volume);
     }
-    public void SetVoicesV(float volumen)
+    public void SetVoicesV(float volume)
     {
-        voices.SetFloat("volumen", volumen);
-        PlayerPrefs.SetFloat("voices", volumen);
+        voices.SetFloat("volume", volume);
+        PlayerPrefs.SetFloat("voices", volume);
     }
 }

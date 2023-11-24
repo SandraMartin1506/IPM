@@ -21,4 +21,8 @@ public class Options : MonoBehaviour
         SceneManager.LoadScene(Escena, LoadSceneMode.Single);
     }
 
+    public void LoadGame (int fileNumber)
+    {
+        //string filePath = FileManager.savePath
+    }
 }

@@ -7,12 +7,12 @@ using static DialogueSystem;
 
 public class TextOptions : MonoBehaviour
 {
-    static public float Size = 30;
-    static public float Spacing = 1;
-    static public float Kerning = 0.1f;
+    static public float Size;
+    static public float Spacing;
+    static public float WordS;
     [SerializeField] private Slider TextSize;
     [SerializeField] private Slider TextSpacing;
-    [SerializeField] private Slider TextKerning;
+    [SerializeField] private Slider TextWordS;
 
     public void Start()
     {
@@ -26,10 +26,10 @@ public class TextOptions : MonoBehaviour
             TextSpacing.value = PlayerPrefs.GetFloat("spacing");
             SetSpacing(TextSpacing.value);
         }
-        if (PlayerPrefs.HasKey("kerning"))
+        if (PlayerPrefs.HasKey("wordS"))
         {
-            TextKerning.value = PlayerPrefs.GetFloat("kerning");
-            SetKerning(TextKerning.value);
+            TextWordS.value = PlayerPrefs.GetFloat("wordS");
+            SetWordS(TextWordS.value);
         }
     }
     public void SetSize(float size)
@@ -42,10 +42,10 @@ public class TextOptions : MonoBehaviour
         Spacing = spacing;
         PlayerPrefs.SetFloat("spacing", spacing);
     }
-    public void SetKerning(float kerning)
+    public void SetWordS(float wordS)
     {
-        Kerning = kerning;
-        PlayerPrefs.SetFloat("kerning", kerning);
+        WordS = wordS;
+        PlayerPrefs.SetFloat("wordS", wordS);
     }
 
     //speechText.fontSize = TextOptions.Size;

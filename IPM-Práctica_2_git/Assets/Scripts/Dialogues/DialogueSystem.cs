@@ -35,6 +35,13 @@ public class DialogueSystem : MonoBehaviour
         speechPanel.SetActive(true);
         speechText.text = "";
         speakerNameText.text = DetermineSpeaker(targetSpeaker);
+        if(TextOptions.Size != speechText.fontSize) { speechText.fontSize = TextOptions.Size; }
+
+        speechText.lineSpacing = TextOptions.Spacing;
+        speechText.wordSpacing = TextOptions.WordS;
+        speakerNameText.wordSpacing = TextOptions.WordS+3;
+        speakerNameText.fontSize = TextOptions.Size+5;
+
         isWatingForUserInput = false;
         while(speechText.text != targetSpeech)
         {
