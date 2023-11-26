@@ -14,7 +14,7 @@ public class CharacterManager : MonoBehaviour
         instance = this;
     }
    
-    public Character GetCharacter(string name, bool createCharacterIfdontExist = true)
+    public Character GetCharacter(string name, bool createCharacterIfdontExist = true, bool enableWhenAppears = true)
     {
         int index = -1;
         if(characterDictionary.TryGetValue(name, out index)) { 
@@ -22,16 +22,18 @@ public class CharacterManager : MonoBehaviour
         }
         else if(createCharacterIfdontExist) 
         {
-            return CreateCharacter(name);
+            return CreateCharacter(name, enableWhenAppears);
         }
         return null;
     }
 
-    public Character CreateCharacter(string name)
+    public Character CreateCharacter(string name, bool enableWhenAppears = true)
     {
         Character newCharacter = new Character(name);
         characterDictionary.Add(name, characterList.Count);
         characterList.Add(newCharacter);
         return newCharacter;
     }
+
+
 }

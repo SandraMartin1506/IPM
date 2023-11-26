@@ -82,7 +82,7 @@ public class ChoiceScreen : MonoBehaviour
         b.text = choice;
         b.choiceIndex = choiceButtons.Count;
         choiceButtons.Add(b);
-        Debug.Log(b.choiceIndex);
+        
     }
 
     [System.Serializable]
@@ -110,6 +110,9 @@ public class ChoiceScreen : MonoBehaviour
         /////////////////////////////////////////////////////////AW>OODXAWO
         LoadJobInfo.jobsInfo[0] = "owasowa";
         HealthControl.value -= 5;
+
+        NovelController.instance.Next();
+        
     }
     
 }
