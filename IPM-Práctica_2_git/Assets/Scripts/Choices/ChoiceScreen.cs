@@ -106,9 +106,7 @@ public class ChoiceScreen : MonoBehaviour
         choice.title = button.text;
         root.SetActive(false);
 
-        //Prueba
-        /////////////////////////////////////////////////////////AW>OODXAWO
-        LoadJobInfo.jobsInfo[0] = "owasowa";
+        LoadJobInfo.jobsInfo[0] = choice.title;
         HealthControl.value -= 5;
 
         NovelController.instance.Next();

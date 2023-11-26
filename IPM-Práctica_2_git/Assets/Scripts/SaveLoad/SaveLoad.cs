@@ -31,12 +31,12 @@ public class SaveLoad : MonoBehaviour
         activeChapterFile = activeGameFile.chapterName;
         cachedLastSpeaker = activeGameFile.cachedLastSpeaker;
 
-        //DialogueSystem.instance.Open(activeGameFile.currentTextSystemSpeakerNameText, activeGameFile.currentTextSystemDisplayText);
+       //DialogueSystem.instance.Open(activeGameFile.currentTextSystemSpeakerNameText, activeGameFile.currentTextSystemDisplayText);
 
         for (int i = 0; i < activeGameFile.charactersInScene.Count; i++)
         {
             GAMEFILE.CHARACTERDATA data = activeGameFile.charactersInScene[i];
-            //Character character = CharacterManager.instance.CreateCharacter(data.characterName, data.enabled);
+            Character character = CharacterManager.instance.CreateCharacter(data.characterName, data.enabled);
         }
 
         if (activeGameFile.music != null)

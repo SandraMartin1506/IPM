@@ -70,12 +70,13 @@ public class NovelController : MonoBehaviour
         handleDialogue(dialogueDetails, dialogue);
 
         
-        yield return new WaitForSeconds(1.0f); 
+        yield return new WaitForSeconds(0.5f); 
         if (HasMoreLines() && NextLineIsChoice())
         {
             progress++;  
             handleChoices(data[progress]);
         }
+        deactivateCharacter();
     }
     bool HasMoreLines()
     {
@@ -103,7 +104,16 @@ public class NovelController : MonoBehaviour
         }
                 Character character = CharacterManager.instance.GetCharacter(speaker);
                 character.Say(dialogue);
-               
+         
+    }
+
+    void deactivateCharacter() {
+        if (data[progress+1].StartsWith("deactivate"))
+        {
+            Character character = CharacterManager.instance.GetCharacter(cachedLastSpeaker);
+            character.Deactivate();
+            progress++;
+        }
     }
 
     void handleChoices(string line)
@@ -130,9 +140,8 @@ public class NovelController : MonoBehaviour
         {
             
             ChoiceScreen.Show(choices.ToArray());
-           
         }
-        choices.Clear();
+         choices.Clear();
     }
 
 }
