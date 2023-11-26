@@ -13,7 +13,9 @@ public class LoadJobInfo : MonoBehaviour
     void Start()
     {
         if (jobsInfo[jobNumber] != null) { job.text = jobsInfo[jobNumber]; }
+        if(jobsInfo[jobNumber] == "") { job.text = "??"; }
         if (jobsInfo[jobNumber + 1] != null) { result.text = jobsInfo[jobNumber + 1]; }
+        if(jobsInfo[jobNumber + 1] == "") { result.text = "??"; }
 
         if (TextOptions.Size != job.fontSize) { job.fontSize = TextOptions.Size; }
         if (TextOptions.Spacing != job.lineSpacing) { job.lineSpacing = TextOptions.Spacing; }

@@ -8,6 +8,7 @@ public class DialogueSystem : MonoBehaviour
   public static DialogueSystem instance;
   public ELEMENTS elements;
   [HideInInspector]  public bool isWatingForUserInput = false;
+    string targetSpeech = "";
   
  Coroutine speaking = null;
     private void Awake()
@@ -18,6 +19,7 @@ public class DialogueSystem : MonoBehaviour
     public void Say(string speech, string speaker = "")
     {
         StopSpeaking();
+        speechText.text = speech;
         StartCoroutine(Speaking(speech, speaker));
     }
 
@@ -28,11 +30,13 @@ public class DialogueSystem : MonoBehaviour
             StopCoroutine(speaking);
         }
         speaking = null;
+        
     }
     public bool isSpeaking { get { return speaking != null; } }
-    IEnumerator Speaking(string targetSpeech, string targetSpeaker = "")
+    IEnumerator Speaking(string speech, string targetSpeaker = "")
     {
         speechPanel.SetActive(true);
+        targetSpeech = speech;
         speechText.text = "";
         speakerNameText.text = DetermineSpeaker(targetSpeaker);
 

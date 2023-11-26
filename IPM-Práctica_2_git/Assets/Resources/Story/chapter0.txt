@@ -1,0 +1,46 @@
+Carmen "Hola, Me llamo Carmen Jimenez, tengo cuarenta y un años, siete meses y doce días."
+"Hace seis meses y cuatro días pillé a mi, entonces marido, Antonio, escribiendo guarrerías a veinteañeras en instagram,"
+"así que, tras un tortuoso proceso judicial me hallo “felizmente” divorciada desde hace un mes."
+"Me he visto obligada a rehacer mi vida desde cero. Mi primer paso es una entrevista de trabajo, que por algo se empieza."
+"(La entrevista de trabajo era de…)"
+choice
+{
+"Jefa Sala Restaurante"
+"Administradora Bufete de Abogados"
+"Departamento de ventas en una tienda"
+}
+"(cierto, estoy tan nerviosa que ni me acordaba. Debería revisar ya la hora de la entrevista.)"
+"(La entrevista es en 50 minutos... tengo que prepararme ya, Angélica me ha conseguido esta entrevista"
+"y encima me va a acercar al sitio con su coche, como mínimo agradecimiento tengo que ser super puntual)"
+"(La entrevista es para un puesto importante, debería vestirme lo mejor posible para encajar)"
+"(me he preparado tres outfits para hoy… Para probármelos, solo tengo que pulsar el botón del armario que se ve en pantalla)"
+"(Este debería ir bien… creo)"
+"Oh, es Angélica"
+Teléfono "HOLA NENAA, ¿QUÉ TAL ESTÁS???, COMO VAS ??? ASUMO QUE PUNTUAL, SI TÚ ERES MUY ORGANIZADA YA LO SABES, SI TE LO DIGO SIEMPRE"
+Carmen "s…si … y si y…"
+Teléfono "Y DIME TE HAS PUESTO GUAPA PARA LA ENTREVISTA???"
+"AY QUE PREGUNTA POR SUPUESTO QUE TE HAS PUESTO GUAPA, SI ES QUE ERES ASÍ SABES SACARTE ESE NO SE QUE CUANDO TE ARREGLAS QUE…"
+"AH, ES MUY IMPORTANTE QUE PROVOQUES UNA MUY BUENA IMPRESIÓN EN LA ENTREVISTA SABES??"
+"NO ME DEJES MAL QUE LA GENTE QUE LLEVA ESTO SON AMIGOS MÍOS DE LA UNIVERSIDAD DE TODA LA VIDA Y LES HE HABLADO MARAVILLAS DE TI"
+Carmen "(pero si no fue a la universidad)"
+Teléfono "NADA CUANDO CONSIGAS EL CURRO POR QUE SE QUE LO VAS A LOGRAR," 
+"NOS VAMOS TODOS A CENAR A UN LOCAL PRECIOSO QUE CONOZCO EN LAS AFUERAS, QUE SOY AMIGA ÍNTIMA DEL DUEÑO Y NOS INVITA"
+Carmen "(¿de donde sacará tantos amigos?)"
+"Qué bie-"
+Teléfono "POR CIERTOOO, YA ESTOY EN TU PORTAL, TE ESPERO ABAJOO"
+Carmen "(que está ya aquí ?! pero si hace 25 min me dijo que estaba saliendo y vive a casi una hora en coche…)"
+"A ver... llaves, cartera, gaf-"
+Angélica "AAAAH PERO QUE GUAPÍIIIISIMA QUE VAS, PERO DAME UN BESO, ¿¿¿NO??? MUAAA"
+Carmen "(20 minutos maquillándome para luego esto...)"
+Angélica "BUENO, ¿¿CÓMO TE VES?? ¿¿LISTA?? ¿¿HAS DORMIDO BIEN??"
+choice
+{
+"Supongo que no voy todo lo preparada que puedo."
+"Me veo...lista, espero"
+}
+Angélica "Ya verás que sí, estoy segura de que lo harás GENIAL"
+
+
+
+
+
